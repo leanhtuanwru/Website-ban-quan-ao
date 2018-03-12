@@ -1,0 +1,16 @@
+.starter-template {
+    border-top: 1px solid black;
+            
+}
+#focus-1 {
+    background: #80FF7C;
+    border-radius: 5px;
+}
+#focus-2 {
+    background: #69FFE1;
+    border-radius: 5px;
+}
+#focus-3 {
+    background: #5FADFB;
+    border-radius: 5px;
+}
