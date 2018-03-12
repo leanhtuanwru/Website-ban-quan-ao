@@ -1,11 +1,12 @@
 * {
-	margin: 0px auto;
-	padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
-	font-family: 'Playfair Display', serif;
+	font-family: "Montserrat", sans-serif;
 	color: #222;
+    margin: 0;
+    padding: 0;
 }
 
 #logo {
@@ -29,7 +30,7 @@ body {
 }
 
 #menu {
-	text-transform: uppercase;
+	text-transform: uppercase 1s;
 	text-align: center;
 	line-height: 40px;
 	font-size: 13px;
@@ -46,15 +47,46 @@ body {
 	margin: 10px;
 }
 
+#menu form {
+    display: inline;
+}
+
 a {
 	text-decoration: none;
 	color: #222;
+    transition: all 0.5s;
 }
 
 a:hover {
 	color: #ef2673;
 }
+.form-serach {
+}
+.promotion {
+    text-align: center;
+    margin-bottom: 1.5em;
+    border-top: 1px solid black;
+}
 
+.promotion .policy-row {
+    display: inline-block;
+    border-radius: 10px;
+    margin-right: 2em;
+}
+.promotion .policy-row .policy-col {
+    width: 300px;
+    height: 80px;
+}
+
+.promotion .policy-row #policy-item-1 {
+    background-color: #7daef5;
+}
+.promotion .policy-row #policy-item-2 {
+    background-color: #ffeaeb;
+}
+.promotion .policy-row #policy-item-3 {
+    background-color: #7daef5;
+}
 #event img {
 	width: 100%;
 	height: auto;
@@ -68,10 +100,12 @@ a:hover {
 	margin: 15px;
 	margin-bottom: 30px;
 	border: 1px solid #e5e5e5;
+    text-align: center
 }
 
 .tab a {
 	color: #36a9f1;
+    transition: all 0.5s;
 }
 
 .tab a:hover {
@@ -87,7 +121,9 @@ a:hover {
 	font-size: 26px;
 	text-transform: uppercase;
 	border: 1px solid #f24b8a;
-	margin-bottom: 10px;
+    margin: 0 auto;
+    margin-bottom: 1.6em;
+    margin-top: 1.2em;
 }
 
 .tab h3 {
