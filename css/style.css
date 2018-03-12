@@ -17,9 +17,9 @@ body {
 }
 
 #bottom {
-	background: #282828;
-	padding: 10px;
-	color: #fff;
+	background: #fff;
+	line-height: 50px;
+	color: #222;
 	font-weight: bold;
 	text-align: center;
 }
@@ -29,20 +29,22 @@ body {
 	height: auto;
 }
 
-#menu {
-	text-transform: uppercase 1s;
+
+#menu, #bottom {
+	text-transform: uppercase;
+>>>>>>> 597e983e1464e2edf864ea8418502e5145c882ef
 	text-align: center;
 	line-height: 40px;
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: 600;
 	border-bottom: 1px solid #e5e5e5;
 }
 
-#menu ul {
+#menu ul, #bottom ul {
 	list-style-type: none;
 }
 
-#menu li {
+#menu li, #bottom li {
 	display: inline;
 	margin: 10px;
 }
@@ -142,3 +144,19 @@ a:hover {
 	margin-bottom: 5px;
 }
 
+#contact {
+	clear: left;
+}
+
+.contact {
+	background: #f8f8f8;
+	width: 31.33%;
+	float: left;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	padding: 40px 1%;
+}
+
+.contact h3 {
+	text-align: center;
+}
