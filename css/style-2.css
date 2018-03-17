@@ -1,16 +1,48 @@
-.starter-template {
-    border-top: 1px solid black;
-            
+body{
+    font-family: "Montserrat", sans-serif;
 }
-#focus-1 {
-    background: #80FF7C;
+
+.starter-template {
+    padding: 0;
+    padding-bottom: 15px;
+    margin-top: -10px;
+    
+    
+}
+.promotion {
+    padding-top: 10px;
     border-radius: 5px;
+    padding-bottom: 10px;
+}
+.promotion h3 {
+    margin-bottom: 0px;
+}
+
+#focus-1 {
+    background: #e9f2ff;
 }
 #focus-2 {
-    background: #69FFE1;
-    border-radius: 5px;
+    background: #ffeaeb;
 }
 #focus-3 {
-    background: #5FADFB;
-    border-radius: 5px;
+    background: #e9f2ff;
+}
+.box-title {
+    margin: 40px;
+}
+.box-title h3 {
+    margin-bottom: 0;
+}
+.name-product {
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+.price {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+.footer-content a {
+    border-right: 1px solid red;
+    padding-right: 15px;
+    padding-left: 10px;
 }
