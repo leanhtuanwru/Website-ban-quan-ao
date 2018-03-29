@@ -1,78 +1,10 @@
-<!DOCTYPE html>
-<html lang="vi">
+<!-- include Header -->
+<?php include('includes/header.php') ?>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="#">
+<!-- inlcude nav-bar -->
+<?php include('includes/nav.php') ?>
+<?php include('includes/config.php') ?>
 
-    <title>3T Shop Fashion</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- Custom styles for this template -->
-    <style type="text/css">
-        body {
-            padding-top: 5rem;
-        }
-
-        .starter-template {
-            padding: 3rem 1.5rem;
-            text-align: center;
-        }
-
-    </style>
-    <link rel="stylesheet" href="css/style-2.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <!-- fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic&subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic&subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
-    <link href="font/css/font-awesome.min.css" media="all" type="text/css" rel="stylesheet" />
-    <link href="font/css/pe-icon-7-stroke.css" media="all" type="text/css" rel="stylesheet" />
-    <!--    font-awesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
-</head>
-
-
-<body>
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="navbar">
-        <a class="navbar-brand" href="#">3T Shop</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Nam</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Nữ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Sale</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Liên hệ</a>
-                </li>
-
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
-            </form>
-        </div>
-    </nav>
 
     <main role="main" class="container-fluid">
         <div class="logo-of-shop text-center">
@@ -153,89 +85,30 @@
                 </div>
             </div>
 
-            <div class="owl-carousel owl-theme">
-                <div>
-                    <img src="img/Product/Newtoday/dress_Floral.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress Folral</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="img/Product/Newtoday/dress_Floral.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress Folral</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="img/Product/Newtoday/dress_Floral.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress Folral</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="img/Product/Newtoday/dress_Floral.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress Folral</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="img/Product/Newtoday/dress_Floral.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress Folral</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="img/Product/Newtoday/dress_Floral.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress Folral</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+            
 <!--        End New In Today-->
+            <div class="owl-carousel owl-theme" id="getslide">
+                   <?php
+                    $sql = "select * from product";
+                    $query = mysqli_query($conn, $sql);
+                    $n=0;
+                    while($data = mysqli_fetch_assoc($query)){
+                    $n++;
+                        echo "<div>";
+                    echo "<img src='$data[img]' alt=\"\">";
+                    echo "<div class='product-info'>";
+                    echo "   <div class='product-name text-center'>";
+                    echo "       <a href=\"\">$data[name]</a>";
+                    echo "    </div>";
+                    echo "    <div class='product-price text-center'>$data[price]$</div> ";
+                     echo "   <div class='price text-center'> ";
+                     echo "       <button type='button' class='btn btn-success'>Add to cart</button>";
+                    echo "    </div> ";
+                    echo "</div>";
+                        echo "</div>";
+                    }
+                    ?>    
+            </div>
         
         <!--        sale-->
         <div class="sale-promotion">
@@ -281,7 +154,7 @@
             <div>
                 <div class="box-title text-center">
                     <h3>
-                        NEW ARRIVAL
+                        <a href="#" onclick="getdata(1)">NEW ARRIVAL</a>
                     </h3>
                     <div>
                         <img src="img/title-icon.png" alt="">
@@ -289,7 +162,7 @@
                 </div>
             </div>
 
-            <div class="owl-carousel owl-theme">
+            <div class="owl-carousel owl-theme" id="getslide">
                 <div>
                     <img src="img/Product/Newtoday/dress-1.jpg" alt="">
                     <div class="product-info">
@@ -375,51 +248,6 @@
 
 
 
-        <!--        footer-->
-        <hr>
-        <footer class="footer">
-            <div class="text-center footer-content">
-                <a href="#">About Us</a>
-                <a href="#">Help</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Policy</a>
-                <a href="#">Gift Vouchers</a>
-                <a href="#">Sitemap</a>
-            </div>
-
-            <div class="footer-social text-center">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-            <div class="copyright text-center">
-                Copyrights © 2018 All Rights Reserved by TuanTuanTu Inc
-            </div>
-        </footer>
+        <!--  include footer-->
         
-    </main>
-    <!-- /.container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!--    wow.js-->
-    <script src="js/wow.min.js"></script>
-    <script>
-        new WOW().init();
-
-    </script>
-
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/custom.owl.carousel.js"></script>
-
-
-</body>
-
-</html>
+<?php include('includes/footer.php')?>
