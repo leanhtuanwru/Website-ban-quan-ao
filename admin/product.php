@@ -126,14 +126,19 @@
               <thead>
                 <tr>
                   <th>STT</th>
-                  <th>Tên danh mục</th>
-                  <th colspan="2" style="text-align:center"><a href='add_category.php'><button type='button' class='btn btn-outline-warning'>Thêm</button></a></th>
+                  <th>Tên</th>
+                  <th>Hình ảnh</th>
+                  <th>Giá</th>
+                  <th>Mô tả</th>
+                  <th>Ngày thêm</th>
+                  <th>Ngày sửa</th>
+                  <th style="text-align:center"><a href='add_product.php'><button type='button' class='btn btn-outline-warning'>Thêm</button></a></th>
                 </tr>
               </thead>
               <tbody>
               <?php
               require("../includes/config.php");
-              $sql = "select * from category";
+              $sql = "select * from product";
               $query = mysqli_query($conn, $sql);
               $n = 0;
               while($data = mysqli_fetch_assoc($query)){
@@ -141,8 +146,12 @@
                 echo "<tr>";
                 echo "<td>$n</td>";
                 echo "<td>$data[name]</td>";
-                echo "<td style='text-align:center'><a href='edit_category.php?id=$data[id]'><button type='button' class='btn btn-outline-success'>Sửa</button></a></td>";
-                echo "<td style='text-align:center'><a href='delete_category.php?id=$data[id]' onclick='return xacnhan()'><button type='button' class='btn btn-outline-danger'>Xóa</button></a></td>";
+                echo "<td><img src='../img/$data[img]' width='200'></td>";
+                echo "<td>$data[price]</td>";
+                echo "<td>$data[description]</td>";
+                echo "<td>$data[date]</td>";
+                echo "<td>$data[edit_time]</td>";
+                echo "<td style='text-align:center'><a href='edit_product.php?id=$data[id]'><button type='button' class='btn btn-outline-success'>Sửa</button></a><a href='delete_product.php?id=$data[id]' onclick='return xacnhan()'><button type='button' class='btn btn-outline-danger'>Xóa</button></a></td>";
                 echo "</tr>";
               }
               ?>

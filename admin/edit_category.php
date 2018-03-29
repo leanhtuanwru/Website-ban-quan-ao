@@ -14,20 +14,13 @@
     <meta name="author" content="">
     <link rel="icon" href="">
 
-    <title>Quản lý danh mục</title>
+    <title>Đổi tên danh mục</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="../css/dashboard.css" rel="stylesheet">
-    <script>
-      function xacnhan(){
-        if(!window.confirm('Bạn có chắc là muốn xóa danh mục này không?')){
-          return false;
-        }
-      }
-    </script>
   </head>
 
   <body>
@@ -49,37 +42,37 @@
               <li class="nav-item">
                 <a class="nav-link active" href="#">
                   <span data-feather="home"></span>
-                  Bảng điều khiển <span class="sr-only">(current)</span>
+                  Dashboard <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="file"></span>
-                  Đơn hàng
+                  Orders
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="shopping-cart"></span>
-                  Sản phẩm
+                  Products
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="users"></span>
-                  Khách hàng
+                  Customers
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="bar-chart-2"></span>
-                  Báo cáo
+                  Reports
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="layers"></span>
-                  Danh mục
+                  Integrations
                 </a>
               </li>
             </ul>
@@ -120,35 +113,27 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-          <h2>Danh mục</h2>
-          <div class="table-responsive">
-            <table class="table table-striped table-sm">
-              <thead>
-                <tr>
-                  <th>STT</th>
-                  <th>Tên danh mục</th>
-                  <th colspan="2" style="text-align:center"><a href='add_category.php'><button type='button' class='btn btn-outline-warning'>Thêm</button></a></th>
-                </tr>
-              </thead>
-              <tbody>
-              <?php
-              require("../includes/config.php");
-              $sql = "select * from category";
-              $query = mysqli_query($conn, $sql);
-              $n = 0;
-              while($data = mysqli_fetch_assoc($query)){
-                $n++;
-                echo "<tr>";
-                echo "<td>$n</td>";
-                echo "<td>$data[name]</td>";
-                echo "<td style='text-align:center'><a href='edit_category.php?id=$data[id]'><button type='button' class='btn btn-outline-success'>Sửa</button></a></td>";
-                echo "<td style='text-align:center'><a href='delete_category.php?id=$data[id]' onclick='return xacnhan()'><button type='button' class='btn btn-outline-danger'>Xóa</button></a></td>";
-                echo "</tr>";
-              }
-              ?>
-              </tbody>
-            </table>
-          </div>
+          <h2>Đổi tên danh mục</h2>
+          <?php
+          require("../includes/config.php");
+          $id = $_GET['id'];
+          if(isset($_POST['ok'])){
+            $c = $_POST['inputCategory'];
+            $sql = "update category set name='$c' where id='$id'";
+            mysqli_query($conn, $sql);
+            header("location:category.php");
+            exit();
+          }
+          $sql = "select * from category where id='$id'";
+          $query = mysqli_query($conn, $sql);
+          $data = mysqli_fetch_assoc($query);
+          ?>
+          <form action="edit_category.php?id=<?php echo $id; ?>" method="POST">
+            <div class="form-group">
+              <input type="text" class="form-control" name="inputCategory" placeholder="Tên danh mục mới" value="<?php echo $data[name]; ?>" required>
+            </div>
+            <button type="submit" name="ok" class="btn btn-primary">Sửa</button>
+          </form>
         </main>
       </div>
     </div>
