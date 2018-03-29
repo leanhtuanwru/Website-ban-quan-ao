@@ -160,3 +160,7 @@ a:hover {
 .contact h3 {
 	text-align: center;
 }
+
+img{
+    max-width: 100%;
+}

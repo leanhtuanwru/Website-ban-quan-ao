@@ -3,7 +3,7 @@
 
 <!-- inlcude nav-bar -->
 <?php include('includes/nav.php') ?>
-
+<?php include('includes/config.php') ?>
 
 
     <main role="main" class="container-fluid">
@@ -85,89 +85,30 @@
                 </div>
             </div>
 
-            <div class="owl-carousel owl-theme">
-                <div>
-                    <img src="img/Product/Newtoday/dress_Floral.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress Folral</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="img/Product/Newtoday/dress_Floral.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress Folral</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="img/Product/Newtoday/dress_Floral.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress Folral</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="img/Product/Newtoday/dress_Floral.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress Folral</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="img/Product/Newtoday/dress_Floral.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress Folral</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="img/Product/Newtoday/dress_Floral.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress Folral</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+            
 <!--        End New In Today-->
+            <div class="owl-carousel owl-theme" id="getslide">
+                   <?php
+                    $sql = "select * from product";
+                    $query = mysqli_query($conn, $sql);
+                    $n=0;
+                    while($data = mysqli_fetch_assoc($query)){
+                    $n++;
+                        echo "<div>";
+                    echo "<img src='$data[img]' alt=\"\">";
+                    echo "<div class='product-info'>";
+                    echo "   <div class='product-name text-center'>";
+                    echo "       <a href=\"\">$data[name]</a>";
+                    echo "    </div>";
+                    echo "    <div class='product-price text-center'>$data[price]$</div> ";
+                     echo "   <div class='price text-center'> ";
+                     echo "       <button type='button' class='btn btn-success'>Add to cart</button>";
+                    echo "    </div> ";
+                    echo "</div>";
+                        echo "</div>";
+                    }
+                    ?>    
+            </div>
         
         <!--        sale-->
         <div class="sale-promotion">
