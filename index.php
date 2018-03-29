@@ -87,9 +87,9 @@
 
 
 
-        <div class="owl-carousel owl-theme" id="getslide">
+        <div class="owl-carousel owl-theme">
             <?php
-                    $sql = "select * from product";
+                    $sql = "select * from newintoday";
                     $query = mysqli_query($conn, $sql);
                     $n=0;
                     while($data = mysqli_fetch_assoc($query)){
@@ -121,7 +121,7 @@
                         <div class="ov2"></div>
                         <div class="ov3"></div>
                         <div class="ov4"></div>
-                        <a href="/categories/1" style="height: 350px; background-image: url('img/sale-60.jpg'); background-size: cover; background-position: center; width: 100%;display: block;">
+                        <a href="#" style="height: 350px; background-image: url('img/sale-60.jpg'); background-size: cover; background-position: center; width: 100%;display: block;">
                   </a>
                     </div>
                 </div>
@@ -131,7 +131,7 @@
                         <div class="ov2"></div>
                         <div class="ov3"></div>
                         <div class="ov4"></div>
-                        <a href="/categories/2" style="height: 350px; background-image: url('img/sale-70.jpg'); background-size: cover; background-position: center; width: 100%;display: block;">
+                        <a href="#" style="height: 350px; background-image: url('img/sale-70.jpg'); background-size: cover; background-position: center; width: 100%;display: block;">
                   </a>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
                         <div class="ov2"></div>
                         <div class="ov3"></div>
                         <div class="ov4"></div>
-                        <a href="/categories/3" style="height: 350px; background-image: url('img/free-19.jpg'); background-size: cover; background-position: center; width: 100%;display: block;">
+                        <a href="#" style="height: 350px; background-image: url('img/free-19.jpg'); background-size: cover; background-position: center; width: 100%;display: block;">
                   </a>
                     </div>
                 </div>
@@ -156,7 +156,8 @@
             <div>
                 <div class="box-title text-center">
                     <h3>
-                        <a href="#" onclick="getdata(1)">NEW ARRIVAL</a>
+<!--                        <a href="#" onclick="getdata(1)">BEST SELLER</a>-->
+                       BEST SELLER
                     </h3>
                     <div>
                         <img src="img/title-icon.png" alt="">
@@ -164,85 +165,27 @@
                 </div>
             </div>
 
-            <div class="owl-carousel owl-theme" id="getslide">
-                <div>
-                    <img src="img/Product/Newtoday/dress-1.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="img/Product/Newtoday/dress-1.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="img/Product/Newtoday/dress-1.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="img/Product/Newtoday/dress-1.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="img/Product/Newtoday/dress-1.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="img/Product/Newtoday/dress-1.jpg" alt="">
-                    <div class="product-info">
-                        <div class="product-name text-center">
-                            <a href="">Dress</a>
-                        </div>
-                        <div class="product-price text-center">$35</div>
-                        <div class="price text-center">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-
-                        </div>
-                    </div>
-                </div>
+            <div class="owl-carousel owl-theme">
+                <?php
+                    $sql = "select * from bestseller";
+                    $query = mysqli_query($conn, $sql);
+                    $n=0;
+                    while($data = mysqli_fetch_assoc($query)){
+                    $n++;
+                    echo "<div>";
+                    echo "<img src='$data[img]' alt=\"\">";
+                    echo "<div class='product-info'>";
+                    echo "   <div class='product-name text-center'>";
+                    echo "       <a href=\"http://localhost/Website-ban-quan-ao/detail.php/?id=$data[id]\">$data[name]</a>";
+                    echo "    </div>";
+                    echo "    <div class='product-price text-center'>$data[price]$</div> ";
+                    echo "   <div class='price text-center'> ";
+                    echo "       <button type='button' class='btn btn-success'>Add to cart</button>";
+                    echo "    </div> ";
+                    echo "</div>";
+                        echo "</div>";
+                    }
+                    ?>
 
             </div>
         </div>

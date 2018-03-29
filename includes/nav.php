@@ -21,20 +21,10 @@
                     }
 
                 ?>
-<!--
-                <li class="nav-item">
-                    <a class="nav-link" href="">Nam</a>
+                <li>
+                    <a class="nav-link disabled" href="http://localhost/Website-ban-quan-ao//contact_us.php">Liên hệ</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Nữ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Sale</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Liên hệ</a>
-                </li>
--->
+
 
             </ul>
             <form class="form-inline my-2 my-lg-0">
