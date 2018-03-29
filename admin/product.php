@@ -23,7 +23,7 @@
     <link href="../css/dashboard.css" rel="stylesheet">
     <script>
       function xacnhan(){
-        if(!window.confirm('Bạn có chắc là muốn xóa danh mục này không?')){
+        if(!window.confirm('Bạn có chắc là muốn xóa sản phẩm này không?')){
           return false;
         }
       }
