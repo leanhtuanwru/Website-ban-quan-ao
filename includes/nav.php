@@ -1,16 +1,29 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="navbar">
-        <a class="navbar-brand" href="#">3T Shop</a>
+        <a class="navbar-brand" href="index.php">3T Shop</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+        
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php">Trang chủ <span class="sr-only">(current)</span></a>
                 </li>
+                
+                <?php 
+                    require_once('config.php');
+                    $sql = "select * from category";
+                    $query = mysqli_query($conn, $sql);
+                    
+                    while($data = mysqli_fetch_assoc($query)){
+                    echo '<li class="nav-item">';
+                    echo "<a class='nav-link' href='#'>$data[name]</a></li>";                        
+                    }
+
+                ?>
+<!--
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nam</a>
+                    <a class="nav-link" href="">Nam</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Nữ</a>
@@ -21,6 +34,7 @@
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Liên hệ</a>
                 </li>
+-->
 
             </ul>
             <form class="form-inline my-2 my-lg-0">
