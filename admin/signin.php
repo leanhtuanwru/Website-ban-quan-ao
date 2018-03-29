@@ -30,7 +30,7 @@
             session_start();
             $data = mysqli_fetch_assoc($query);
             $_SESSION['ses_username'] = $data['username'];
-            header("location:index.php");
+            header("location:.");
             exit();
           }
         }

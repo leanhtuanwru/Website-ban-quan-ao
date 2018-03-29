@@ -14,20 +14,13 @@
     <meta name="author" content="">
     <link rel="icon" href="">
 
-    <title>Quản lý danh mục</title>
+    <title>Sửa thông tin sản phẩm</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="../css/dashboard.css" rel="stylesheet">
-    <script>
-      function xacnhan(){
-        if(!window.confirm('Bạn có chắc là muốn xóa danh mục này không?')){
-          return false;
-        }
-      }
-    </script>
   </head>
 
   <body>
@@ -49,37 +42,37 @@
               <li class="nav-item">
                 <a class="nav-link active" href="#">
                   <span data-feather="home"></span>
-                  Bảng điều khiển <span class="sr-only">(current)</span>
+                  Dashboard <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="file"></span>
-                  Đơn hàng
+                  Orders
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="shopping-cart"></span>
-                  Sản phẩm
+                  Products
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="users"></span>
-                  Khách hàng
+                  Customers
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="bar-chart-2"></span>
-                  Báo cáo
+                  Reports
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="layers"></span>
-                  Danh mục
+                  Integrations
                 </a>
               </li>
             </ul>
@@ -120,35 +113,82 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-          <h2>Danh mục</h2>
-          <div class="table-responsive">
-            <table class="table table-striped table-sm">
-              <thead>
-                <tr>
-                  <th>STT</th>
-                  <th>Tên danh mục</th>
-                  <th colspan="2" style="text-align:center"><a href='add_category.php'><button type='button' class='btn btn-outline-warning'>Thêm</button></a></th>
-                </tr>
-              </thead>
-              <tbody>
-              <?php
-              require("../includes/config.php");
-              $sql = "select * from category";
-              $query = mysqli_query($conn, $sql);
-              $n = 0;
-              while($data = mysqli_fetch_assoc($query)){
-                $n++;
-                echo "<tr>";
-                echo "<td>$n</td>";
-                echo "<td>$data[name]</td>";
-                echo "<td style='text-align:center'><a href='edit_category.php?id=$data[id]'><button type='button' class='btn btn-outline-success'>Sửa</button></a></td>";
-                echo "<td style='text-align:center'><a href='delete_category.php?id=$data[id]' onclick='return xacnhan()'><button type='button' class='btn btn-outline-danger'>Xóa</button></a></td>";
-                echo "</tr>";
-              }
-              ?>
-              </tbody>
-            </table>
-          </div>
+          <h2>Sửa thông tin sản phẩm</h2>
+          <?php
+          require("../includes/config.php");
+          $id = $_GET['id'];
+          if(isset($_POST['ok'])){
+            $name = $_POST['name'];
+            $cate = $_POST['category'];
+            $price = $_POST['price'];
+            $des = $_POST['description'];
+            if ($_FILES['img']['name'] != NULL) {
+              move_uploaded_file($_FILES['img']['tmp_name'], "../img/" . $_FILES['img']['name']);
+              $img = $_FILES['img']['name'];
+              $sql = "UPDATE `product` SET `name` = '$name', `description` = '$des', `price` = '$price', `img` = '$img', `category_id` = '$cate' WHERE `product`.`id` = $id";
+            } else {
+              $sql = "UPDATE `product` SET `name` = '$name', `description` = '$des', `price` = '$price', `category_id` = '$cate' WHERE `product`.`id` = $id";
+            }
+            mysqli_query($conn, $sql);
+            header("location:product.php");
+            exit();
+          }
+          $sql = "select * from product where id='$id'";
+          $query = mysqli_query($conn, $sql);
+          $data = mysqli_fetch_assoc($query);
+          ?>
+          <form action="edit_product.php?id=<?php echo $id; ?>" method="POST" enctype="multipart/form-data">
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Tên</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="name" placeholder="Tên mới của sản phẩm" value="<?php echo $data[name]; ?>" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Danh mục</label>
+              <div class="col-sm-10">
+                <select class="form-control" name="category">
+                  <?php
+                  $sql = "select * from category";
+                  $query = mysqli_query($conn, $sql);
+                  while ($data2=mysqli_fetch_assoc($query)) {
+                    if ($data[category_id] == $data2[id]){
+                      echo "<option value='$data2[id]' selected>$data2[name]</option>";
+                    } else {
+                      echo "<option value='$data2[id]'>$data2[name]</option>";
+                    }
+                  }
+                  ?>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Giá</label>
+              <div class="col-sm-10">
+                <input type="number" min="0" step="1000" class="form-control" name="price" placeholder="Giá mới của sản phẩm" value="<?php echo $data[price]; ?>" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Mô tả</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" rows="5" name="description" placeholder="Mô tả mới của sản phẩm" required><?php echo $data[description]; ?></textarea>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Hình ảnh</label>
+              <div class="col-sm-10">
+                <img src="../img/<?php echo $data[img]; ?>" width="200" style="margin-bottom:5px">
+                <input type="file" class="form-control-file" name="img">
+                * Chọn hình mới nếu bạn muốn thay đổi hình ảnh. Nếu không muốn thay đổi hình ảnh vui lòng giữ nguyên trường này.
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label"></label>
+              <div class="col-sm-10">
+                <button type="submit" name="ok" class="btn btn-primary">Sửa</button>
+              </div>
+            </div>
+          </form>
         </main>
       </div>
     </div>
