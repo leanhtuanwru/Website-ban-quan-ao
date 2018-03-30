@@ -5,4 +5,5 @@ $conn = mysqli_connect('localhost', 'root', '12345678', 'webshop') or die ('Khô
 
 mysqli_set_charset($conn,"utf8"); 
 
+
 ?>
