@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Trang chủ <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php">Home Page<span class="sr-only">(current)</span></a>
                 </li>
                 
                 <?php 
@@ -22,7 +22,7 @@
 
                 ?>
                 <li>
-                    <a class="nav-link disabled" href="http://localhost/Website-ban-quan-ao//contact_us.php">Liên hệ</a>
+                    <a class="nav-link disabled" href="http://localhost/Website-ban-quan-ao//contact_us.php">About Us</a>
                 </li>
 
 
