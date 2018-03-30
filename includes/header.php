@@ -12,7 +12,8 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style1.css">
+    
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />-->
 
     <!-- Custom styles for this template -->
     <style type="text/css">
@@ -26,10 +27,11 @@
         }
 
     </style>
-    <link rel="stylesheet" href="css/style-2.css">
+    <link rel="stylesheet" type="text/css" href="css/style-2.css">
+    <link rel="stylesheet" type="text/css" href="/css/product.css">
     
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <!-- fonts -->
     <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic&subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
@@ -39,6 +41,7 @@
     <link href="font/css/pe-icon-7-stroke.css" media="all" type="text/css" rel="stylesheet" />
     <!--    font-awesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    
 </head>
 
 
