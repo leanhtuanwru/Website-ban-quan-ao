@@ -133,7 +133,7 @@ hr {
 </head>
 <body>
 
-<!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Đăng ký</button> -->
+ <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Đăng ký</button> 
 
 <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Thoát">&times;</span>
@@ -211,7 +211,7 @@ window.onclick = function(event) {
     // Chạy ajax gửi thông tin về server check_signup.php
     // kiểm tra và xuất ra thông báo
     $.ajax({
-      url: "/webshop/user/check_signup.php",
+      url: "/Website-ban-quan-ao/Sources/user/check_signup.php",
       method: "POST",
       data: { name : name, addr : addr, phone : phone, email : email, psw : psw },
       success : function(response){

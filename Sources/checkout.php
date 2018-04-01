@@ -29,26 +29,6 @@
    
     <h2>Shipment Details</h2>
       
-
-   
-           
-        <?php
-          require("../includes/config.php");
-          if(isset($_POST['create_oder'])){
-              $product_id = $product['id'];
-              $qty = $product['quantity'];
-
-            $sql = "insert into bill(id, user_id) values(NULL, "$_SESSION['ses_id']" )";
-            mysqli_query($conn, $sql);
-            
-            $query = "insert into bill_info(id, bill_id, product_id, quantity) values(NULL, #,'$product_id','$qty')";
-              
-            mysqli_query($conn, $query);
-            header("location:oder_complete.php");
-            exit();
-          }
-          ?>
-    
     
        <form action="oder_complete.php" name="Shipment_Details" method="post">
         <div class="form-group">

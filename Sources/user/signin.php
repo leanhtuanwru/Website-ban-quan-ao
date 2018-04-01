@@ -128,7 +128,7 @@ span.psw {
 </head>
 <body>
 
-<!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
+ <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> 
 
 <div id="id01" class="modal">
   
@@ -151,9 +151,9 @@ span.psw {
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Thoát</button>
-      <span class="psw">Chào cả nhà nhé !!!</a></span>
+      <span class="psw">Chào cả nhà nhé !!!</span>
     </div>
-  </form>
+  </div>
 </div>
 
 <script type="text/javascript">
@@ -176,7 +176,7 @@ span.psw {
         // Chạy ajax gửi thông tin email và mật khẩu về server check_signin.php
         // để kiểm tra thông tin đăng nhập hợp lệ hay chưa
         $.ajax({
-          url: "/webshop/user/check_signin.php",
+          url: "/Website-ban-quan-ao/Sources/user/check_signin.php",
           method: "POST",
           data: { email : email, psw : psw },
           success : function(response){

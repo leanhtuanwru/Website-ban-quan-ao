@@ -9,7 +9,9 @@
 
   <link rel='stylesheet prefetch' href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      <link rel="stylesheet" href="http://localhost/Website-ban-quan-ao/css/detail.css">
+      <link rel="stylesheet" href="http://localhost/Website-ban-quan-ao/Sources/css/detail.css">
+      
+
   
 </head>
 
@@ -30,7 +32,7 @@
         echo "<img src='$data[img]'>";
         echo "<img src='$data[img]'>";
         echo "</div>";
-    echo "<div class='product-detail'>";
+        echo "<div class='product-detail'>";
         
         
         
@@ -46,8 +48,8 @@
     </div>
   </div>
 
-<?php include_once("includes/footer_only.php") ?>
-    <script  src="http://localhost/Website-ban-quan-ao/js/detail.js"></script>
+
+    <script  src="http://localhost/Website-ban-quan-ao/Sources/js/detail.js"></script>
 
 </body>
 
