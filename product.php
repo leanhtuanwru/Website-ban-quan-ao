@@ -73,6 +73,7 @@ function pre_r($array){
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/product.css" />
+        <link rel="stylesheet" href="css/style-2.css" />
         
         <!-- fonts -->
         <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic&subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
@@ -101,13 +102,13 @@ function pre_r($array){
                 <div class="col-sm-4 col-md-3" >
                     <form method="post" action="product.php?action=add&id=<?php echo $product['id']; ?>">
                         <div class="products">
-                            <img src='img/Product/Newtoday/<?php echo $product['img']; ?>' class="img-responsive" />
+                            <img src='img/Product/Newtoday/<?php echo $product['img']; ?>' class="img-responsive"/>
                             <h4 class="text-info"><?php echo $product['name']; ?></h4>
                             <h4>$ <?php echo $product['price']; ?></h4>
                             <input type="text" name="quantity" class="form-control" value="1" />
                             <input type="hidden" name="name" value="<?php echo $product['name']; ?>" />
                             <input type="hidden" name="price" value="<?php echo $product['price']; ?>" />
-                            <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-info"
+                            <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success"
                                    value="Add to Cart" />
                         </div>
                     </form>
@@ -163,7 +164,7 @@ function pre_r($array){
                 if (isset($_SESSION['shopping_cart'])):
                 if (count($_SESSION['shopping_cart']) > 0):
              ?>
-                <a href="#" class="button">Checkout</a>
+                <a href="checkout.php" class="button">Checkout</a>
              <?php endif; endif; ?>
             </td>
         </tr>
@@ -173,5 +174,8 @@ function pre_r($array){
         </table>  
          </div>
         </div>
+        
+        <?php echo $product['name']; ?>
+        <?php include_once('includes/footer_only.php') ?>
     </body>
 </html>
