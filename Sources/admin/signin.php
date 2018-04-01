@@ -18,6 +18,7 @@
       <img class="mb-4" src="../img/logo.gif" alt="" width="" height="">
       <h1 class="h3 mb-3 font-weight-normal">Quản trị viên</h1>
       <?php
+      // Kiểm tra dữ liệu nhập vào với CSDL
         if(isset($_POST['btnSubmit'])){
           $u = $_POST['inputText'];
           $p = $_POST['inputPassword'];
@@ -27,6 +28,7 @@
           if (mysqli_num_rows($query) == 0) {
             echo "Tên đăng nhập và mật khẩu không chính xác. Vui lòng nhập lại.";
           } else {
+            // Cấp cho người dùng một phiên làm việc, đồng thời chuyển người dùng về trang quản trị
             session_start();
             $data = mysqli_fetch_assoc($query);
             $_SESSION['ses_username'] = $data['username'];
@@ -35,15 +37,11 @@
           }
         }
       ?>
+      <!-- Form đăng nhập -->
       <label for="inputEmail" class="sr-only">Tên đăng nhập</label>
       <input type="text" name="inputText" class="form-control" placeholder="Tên đăng nhập" required autofocus>
       <label for="inputPassword" class="sr-only">Mật khẩu</label>
       <input type="password" name="inputPassword" class="form-control" placeholder="Mật khẩu" required>
-      <!-- <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Em à. Nhớ anh không?
-        </label>
-      </div> -->
       <button class="btn btn-lg btn-success btn-block" type="submit" name="btnSubmit">Đăng nhập</button>
       <p class="mt-5 mb-3 text-muted">&copy; <?php date_default_timezone_set('Asia/Ho_Chi_Minh'); echo date('Y'); ?></p>
     </form>
