@@ -54,10 +54,10 @@
                 <img class="d-block w-100" src="img/sale-banner.jpg" alt="First slide" width="1180px">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="img/slide-3.jpg" alt="Second slide">
+                <img class="d-block w-100" src="img/banner_2.jpg" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="img/slide-4.jpg" alt="Third slide" width="1180px">
+                <img class="d-block w-100" src="img/banner_1.jpg" alt="Third slide" width="1180px">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -86,7 +86,7 @@
         </div>
 
 
-
+        
         <div class="owl-carousel owl-theme">
             <?php
                     $sql = "select * from newintoday";
