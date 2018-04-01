@@ -98,11 +98,11 @@
                     echo "<img src='$data[img]' alt=\"\">";
                     echo "<div class='product-info'>";
                     echo "   <div class='product-name text-center'>";
-                    echo "       <a href=\"http://localhost/Website-ban-quan-ao/detail.php/?id=$data[id]\">$data[name]</a>";
+                    echo "       <a href=detail.php/?id=$data[id]\">$data[name]</a>";
                     echo "    </div>";
                     echo "    <div class='product-price text-center'>$data[price]$</div> ";
                     echo "   <div class='price text-center'> ";
-                    echo "       <button type='button' class='btn btn-success'>Add to cart</button>";
+//                    echo "       <button type='button' class='btn btn-success'>Add to cart</button>";
                     echo "    </div> ";
                     echo "</div>";
                         echo "</div>";
@@ -176,11 +176,11 @@
                     echo "<img src='$data[img]' alt=\"\">";
                     echo "<div class='product-info'>";
                     echo "   <div class='product-name text-center'>";
-                    echo "       <a href=\"http://localhost/Website-ban-quan-ao/detail.php/?id=$data[id]\">$data[name]</a>";
+                    echo "       <a href=\"http://localhost/Website-ban-quan-ao/Sources/detail.php/?id=$data[id]\">$data[name]</a>";
                     echo "    </div>";
                     echo "    <div class='product-price text-center'>$data[price]$</div> ";
                     echo "   <div class='price text-center'> ";
-                    echo "       <button type='button' class='btn btn-success'>Add to cart</button>";
+//                    echo "       <button type='button' class='btn btn-success'>Add to cart</button>";
                     echo "    </div> ";
                     echo "</div>";
                         echo "</div>";

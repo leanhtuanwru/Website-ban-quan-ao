@@ -10,8 +10,6 @@
   <link rel='stylesheet prefetch' href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link rel="stylesheet" href="http://localhost/Website-ban-quan-ao/css/detail.css">
-      
-
   
 </head>
 
@@ -22,12 +20,7 @@
   
   <div class="product">
     <div class="product-photo">
-<!--
-      <img src="https://raw.githubusercontent.com/leanhtuanwru/Website-ban-quan-ao/master/img/Product/Newtoday/dress-1.jpg">
-      <img src="https://raw.githubusercontent.com/leanhtuanwru/Website-ban-quan-ao/master/img/Product/Newtoday/dress-1.jpg">
-    </div>
-    <div class="product-detail">
--->
+
       <?php 
         $id = $_GET['id'];  
         $sql = "select name,price,description,img from newintoday where id='$id'";
@@ -53,7 +46,7 @@
     </div>
   </div>
 
-
+<?php include_once("includes/footer_only.php") ?>
     <script  src="http://localhost/Website-ban-quan-ao/js/detail.js"></script>
 
 </body>

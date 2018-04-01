@@ -1,5 +1,5 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="navbar">
-        <a class="navbar-brand" href="http://localhost/Website-ban-quan-ao/index.php">3T Shop</a>
+        <a class="navbar-brand" href="index.php">3T Shop</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="http://localhost/Website-ban-quan-ao/index.php">Home Page<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php">Home Page<span class="sr-only">(current)</span></a>
                 </li>
                 
                 <?php 
@@ -17,12 +17,12 @@
                     
                     while($data = mysqli_fetch_assoc($query)){
                     echo '<li class="nav-item">';
-                    echo "<a class='nav-link' href='product.php'>$data[name]</a></li>";                        
+                    echo "<a class='nav-link' href='product.php?id=$data[id]'>$data[name]</a></li>";                        
                     }
 
                 ?>
                 <li>
-                    <a class="nav-link disabled" href="http://localhost/Website-ban-quan-ao//contact_us.php">About Us</a>
+                    <a class="nav-link disabled" href="contact_us.php">About Us</a>
                 </li>
 
 
