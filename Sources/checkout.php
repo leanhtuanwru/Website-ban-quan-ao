@@ -18,6 +18,7 @@
     <link href="font/css/pe-icon-7-stroke.css" media="all" type="text/css" rel="stylesheet" />
     <!--    font-awesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+
 </head>
 <body>
   
@@ -26,11 +27,12 @@
    <div class="container">
    
 <!--   Form nhập thông tin giao hàng-->
+  <?php require_once('includes/config.php') ?>
    
     <h2>Shipment Details</h2>
       
     
-       <form action="oder_complete.php" name="Shipment_Details" method="post">
+       <form action="" name="Shipment_Details" method="post">
         <div class="form-group">
           <label for="usr">Name:</label>
           <input type="text" class="form-control" id="name" name="full_name">
@@ -92,31 +94,35 @@
              <td align="right">$ <?php echo number_format($total, 2); ?></td>  
              <td></td>  
         </tr>  
-<!--
-        <tr>
-             //Show checkout button only if the shopping cart is not empty 
-            <td colspan="5">
-             <?php 
-                if (isset($_SESSION['shopping_cart'])):
-                if (count($_SESSION['shopping_cart']) > 0):
-             ?>
-                <a href="#" class="button">Submit</a>
-             <?php endif; endif; ?>
-            </td>
-        </tr>
--->
-       
-       
+
         <?php  
         endif;
         ?>  
         </table>  
          </div>
        
+       <?php 
+            if(isset($_POST["create_oder"])) {
+                $id_p = $product['id'];
+                $name_p = $product['name'];
+                $quantity_p = $product['id'];
+                $price_p = $product['price'];
+                
+                $total_p = number_format($product['quantity'] * $product['price'], 2);
+                $sql = "insert into oder values('','$_POST[full_name]','$_POST[phone]','$_POST[address]','$id_p','$name_p','$quantity_p','$price_p','$price_p')";
+                mysqli_query($conn, $sql);
+                session_destroy();
+                echo "Oder Complete. Thank for Shopping ^^";
+                echo "Go to <a href='index.php'>HomePage</a>";
+            }
+       
+       ?>
+
+       
+       
+        
    </div>
-   
-   
-   
+
    <?php include_once('includes/footer_only.php') ?>
 
 </body>

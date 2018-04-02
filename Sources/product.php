@@ -176,8 +176,6 @@ function pre_r($array){
         </table>  
          </div>
         </div>
-        
-        <?php echo $product['name']; ?>
         <?php include_once('includes/footer_only.php') ?>
     </body>
 </html>
