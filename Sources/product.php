@@ -93,7 +93,7 @@ function pre_r($array){
     
         $id = $_GET['id'];
         include_once('includes/config.php');
-        $query = "SELECT id, name, img, price FROM product where id = '$id'  ORDER by id ASC";
+        $query = "SELECT id, name, img, price FROM product where category_id = '$id' ORDER by id ASC";
         $result = mysqli_query($conn, $query);
 
         if ($result):
