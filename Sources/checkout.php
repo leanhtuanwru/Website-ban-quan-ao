@@ -109,7 +109,7 @@
                 $price_p = $product['price'];
                 
                 $total_p = number_format($product['quantity'] * $product['price'], 2);
-                $sql = "insert into oder values('','$_POST[full_name]','$_POST[phone]','$_POST[address]','$id_p','$name_p','$quantity_p','$price_p','$price_p')";
+                $sql = "insert into oder values('','$_POST[full_name]','$_POST[phone]','$_POST[address]','$id_p','$name_p','$quantity_p','$price_p')";
                 mysqli_query($conn, $sql);
                 session_destroy();
                 echo "Oder Complete. Thank for Shopping ^^";
